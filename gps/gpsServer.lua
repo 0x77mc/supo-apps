@@ -134,10 +134,16 @@ local function build()
 end
 
 local function configure()
-	local function getOption(prompt)
+	local function getOption(prompt, default)
 		while true do
 			term.write(prompt)
+			if default ~= nil then
+				term.write('(default: ' .. tostring(default) .. ') ')
+			end
 			local value = read()
+			if value == '' and default ~= nil then
+				return default
+			end
 			if tonumber(value) then
 				return tonumber(value)
 			end
@@ -147,16 +153,27 @@ local function configure()
 
 	print('Server configuration\n\n')
 
+	-- Load existing configuration to use as defaults
+	local existingConfig = {}
+	if fs.exists('usr/config/gpsServer') then
+		existingConfig = Config.load('gpsServer')
+	end
+
 	Config.update('gpsServer', {
-		x = getOption('Turtle x: '),
-		y = getOption('Turtle y: '),
-		z = getOption('Turtle z: '),
-		east = getOption('East modem: modem_'),
-		south = getOption('South modem: modem_'),
-		west = getOption('West modem: modem_'),
-		north = getOption('North modem: modem_'),
+		x = getOption('Turtle x: ', existingConfig.x),
+		y = getOption('Turtle y: ', existingConfig.y),
+		z = getOption('Turtle z: ', existingConfig.z),
+		east = getOption('East modem: modem_', existingConfig.east),
+		south = getOption('South modem: modem_', existingConfig.south),
+		west = getOption('West modem: modem_', existingConfig.west),
+		north = getOption('North modem: modem_', existingConfig.north),
+		x_offset = getOption('X offset correction: ', existingConfig.x_offset or 0),
+		y_offset = getOption('Y offset correction: ', existingConfig.y_offset or 0),
+		z_offset = getOption('Z offset correction: ', existingConfig.z_offset or 0),
 	})
 
+	print('\nOffset corrections allow you to adjust GPS positions')
+	print('if readings are consistently off by a fixed amount.')
 	print('Make sure all wired modems are activated')
 	print('Enter to continue')
 	read()
@@ -185,6 +202,11 @@ local function server(mode)
 	end
 
 	local config = Config.load('gpsServer')
+	
+	-- Ensure offset correction fields exist with default values
+	config.x_offset = config.x_offset or 0
+	config.y_offset = config.y_offset or 0
+	config.z_offset = config.z_offset or 0
 
 	local modems = { }
 	modems['modem_' .. config.east]  = { x = config.x + 2, y = config.y + 1, z = config.z     }
@@ -224,9 +246,9 @@ local function server(mode)
 				comp.lastPos.x = comp.x or 0
 				comp.lastPos.y = comp.y or 0
 				comp.lastPos.z = comp.z or 0
-				comp.x = pt.x
-				comp.y = pt.y
-				comp.z = pt.z
+				comp.x = pt.x + config.x_offset
+				comp.y = pt.y + config.y_offset
+				comp.z = pt.z + config.z_offset
 				comp.id = computerId
 				comp.hbeat = not comp.hbeat
 				comp.alive = true
@@ -292,6 +314,9 @@ if args[1] == 'build' then
 elseif args[1] == 'server' then
 	server('gps')
 
+elseif args[1] == 'configure' then
+	configure()
+
 elseif args[1] == 'snmp' then
 	table.insert(page.grid.columns,
 		{ heading = 'Label', key = 'label', textColor = colors.cyan }
@@ -301,7 +326,7 @@ elseif args[1] == 'snmp' then
 	server('snmp')
 
 else
-	error('Syntax: gpsServer [build | server | snmp]')
+	error('Syntax: gpsServer [build | server | configure | snmp]')
 
 end
 
