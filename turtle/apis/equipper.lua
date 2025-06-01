@@ -138,9 +138,24 @@ function Equipper.equip(side, item)
 		Equipper.unequip(reversed[side])
 	end
 
-	local s, m = turtle.equip(side, equipmentList[item] or item)
+	-- The actual item name to look for (resolve from equipment list if needed)
+	local actualItem = equipmentList[item] or item
+	
+	-- Verify we have the item before trying to equip
+	if not turtle.has(actualItem) then
+		error(string.format('Missing item: %s (resolved to: %s)', item, actualItem))
+	end
+	
+	-- Select the item first - this is critical for turtle.equip to work
+	local selectedSlot = turtle.select(actualItem)
+	if not selectedSlot then
+		error(string.format('Unable to select item: %s (resolved to: %s)', item, actualItem))
+	end
+	
+	-- Now equip it (without the item parameter since we already selected it)
+	local s, m = turtle.equip(side)
 	if not s then
-		error(string.format('Unable to equip %s\n%s', item, m))
+		error(string.format('Unable to equip %s from slot %d: %s', actualItem, selectedSlot.index, m or 'unknown error'))
 	end
 
 	Equipper.equipped[side] = peripheral.getType(side) or item
@@ -166,6 +181,23 @@ function Equipper.debugEquipment()
 	print('  equipmentList[\'advanced_modem\'] = ' .. tostring(equipmentList['advanced_modem']))
 	print('  turtle.has(equipmentList[\'advanced_modem\']) = ' .. tostring(turtle.has(equipmentList['advanced_modem'])))
 	print('  turtle.has(\'computercraft:wireless_modem_advanced\') = ' .. tostring(turtle.has('computercraft:wireless_modem_advanced')))
+	
+	print('Current equipment:')
+	if not Equipper.equipped then
+		getEquipped()
+	end
+	print('  left = ' .. tostring(Equipper.equipped.left))
+	print('  right = ' .. tostring(Equipper.equipped.right))
+	
+	print('Peripheral types:')
+	print('  left = ' .. tostring(peripheral.getType('left')))
+	print('  right = ' .. tostring(peripheral.getType('right')))
+	
+	print('Turtle inventory:')
+	local slots = turtle.getFilledSlots()
+	for _, slot in pairs(slots) do
+		print('  slot ' .. slot.index .. ': ' .. slot.name .. ':' .. slot.damage .. ' x' .. slot.count)
+	end
 end
 
 return Equipper
