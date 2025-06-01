@@ -1138,9 +1138,9 @@ local actionsAt = {
 		forward = turtle.dig,
 	},
 	move = {
-		up = turtle.moveUp,
-		down = turtle.moveDown,
-		forward = turtle.move,
+		up = turtle.up,
+		down = turtle.down,
+		forward = turtle.forward,
 	},
 	attack = {
 		up = turtle.attackUp,
