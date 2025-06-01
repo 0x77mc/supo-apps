@@ -317,9 +317,23 @@ local function collectDrops(suckAction)
 end
 
 local function scan()
-	local scanner = Equipper.equipLeft('plethora:scanner')
+	local success, error_msg = pcall(Equipper.equipLeft, 'plethora:scanner')
+	if not success then
+		error('Failed to equip scanner for scanning: ' .. tostring(error_msg))
+	end
+	
+	local scanner = peripheral.wrap('left')
+	if not scanner then
+		error('Scanner not properly equipped for scanning')
+	end
+	
 	local blocks = scanner.scan()
-	Equipper.equipLeft('minecraft:diamond_pickaxe')
+	
+	success, error_msg = pcall(Equipper.equipLeft, 'minecraft:diamond_pickaxe')
+	if not success then
+		error('Failed to re-equip pickaxe after scanning: ' .. tostring(error_msg))
+	end
+	
 	local throttle = Util.throttle()
 
 	local bedrock = -256
@@ -491,8 +505,15 @@ end
 
 -- in plethora code, we can override initialize with a scanner version
 turtle.initialize = function()
-	Equipper.equipModem('right')
-	Equipper.equipLeft('minecraft:diamond_pickaxe')
+	local success, error_msg = pcall(Equipper.equipModem, 'right')
+	if not success then
+		error('Failed to equip modem: ' .. tostring(error_msg))
+	end
+	
+	success, error_msg = pcall(Equipper.equipLeft, 'minecraft:diamond_pickaxe')
+	if not success then
+		error('Failed to equip pickaxe: ' .. tostring(error_msg))
+	end
 
 	local function verify(item)
 		if not turtle.has(item) then
@@ -500,18 +521,37 @@ turtle.initialize = function()
 		end
 	end
 
-	local items = { 'minecraft:bucket', 'plethora:module' }
+	-- Be more specific about required items
+	local items = { 
+		'minecraft:bucket', 
+		'plethora:module_scanner',  -- More specific than just 'plethora:module'
+		'computercraft:wireless_modem_advanced' -- Ensure we have the advanced modem
+	}
 	for _,v in pairs(items) do
 		verify(v)
 	end
 
 	--os.sleep(5)
 	local pt = GPS.getPoint(2) or error('GPS not found')
-	local scanner = Equipper.equipLeft('plethora:scanner')
+	
+	success, error_msg = pcall(Equipper.equipLeft, 'plethora:scanner')
+	if not success then
+		error('Failed to equip scanner for GPS heading: ' .. tostring(error_msg))
+	end
+	
+	local scanner = peripheral.wrap('left')
+	if not scanner then
+		error('Scanner not properly equipped')
+	end
+	
 	local facing = scanner.getBlockMeta(0, 0, 0).state.facing
 	pt.heading = Point.facings[facing].heading
 	turtle.setPoint(pt, true)
-	Equipper.equipLeft('minecraft:diamond_pickaxe')
+	
+	success, error_msg = pcall(Equipper.equipLeft, 'minecraft:diamond_pickaxe')
+	if not success then
+		error('Failed to re-equip pickaxe: ' .. tostring(error_msg))
+	end
 end
 
 local function main()
