@@ -6,13 +6,13 @@ local turtle     = _G.turtle
 local Equipper = { }
 
 local equipmentList = Config.load('equipment', {
-	[ 'plethora:scanner' ] = 'plethora:module:2',
-	[ 'plethora:sensor' ] = 'plethora:module:3',
-	[ 'plethora:laser' ] = 'plethora:module:1',
-	[ 'plethora:introspection' ] = 'plethora:module:0',
-	[ 'plethora:kinetic' ] = 'plethora:module:4',
-	[ 'advanced_modem' ] = 'computercraft:advanced_modem:0',
-	[ 'standard_modem' ] = 'computercraft:peripheral:1',
+	[ 'plethora:scanner' ] = 'plethora:module_scanner',
+	[ 'plethora:sensor' ] = 'plethora:module_sensor',
+	[ 'plethora:laser' ] = 'plethora:module_laser',
+	[ 'plethora:introspection' ] = 'plethora:module_introspection',
+	[ 'plethora:kinetic' ] = 'plethora:module_kinetic',
+	[ 'advanced_modem' ] = 'computercraft:wireless_modem_advanced',
+	[ 'standard_modem' ] = 'computercraft:wireless_modem_normal',
 })
 
 local SCANNER_EQUIPPED = 'plethora:scanner'
