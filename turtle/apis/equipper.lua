@@ -102,10 +102,22 @@ function Equipper.equipModem(side)
 			Equipper.unequip(reversed[side])
 		end
 		if turtle.has(equipmentList['advanced_modem']) then
-			return Equipper.equip(side, equipmentList['advanced_modem'])
+			local success, result = pcall(Equipper.equip, side, equipmentList['advanced_modem'])
+			if success then
+				return result
+			else
+				-- Log the error for debugging
+				print('Failed to equip advanced modem: ' .. tostring(result))
+			end
 		end
 		if turtle.has(equipmentList['standard_modem']) then
-			return Equipper.equip(side, equipmentList['standard_modem'])
+			local success, result = pcall(Equipper.equip, side, equipmentList['standard_modem'])
+			if success then
+				return result
+			else
+				-- Log the error for debugging
+				print('Failed to equip standard modem: ' .. tostring(result))
+			end
 		end
 		error('Missing modem')
 	end
@@ -142,6 +154,18 @@ end
 
 function Equipper.equipRight(item)
 	return Equipper.equip('right', item)
+end
+
+-- Debug function to check equipment configuration
+function Equipper.debugEquipment()
+	print('Equipment list:')
+	for k, v in pairs(equipmentList) do
+		print('  ' .. k .. ' = ' .. v)
+	end
+	print('Advanced modem check:')
+	print('  equipmentList[\'advanced_modem\'] = ' .. tostring(equipmentList['advanced_modem']))
+	print('  turtle.has(equipmentList[\'advanced_modem\']) = ' .. tostring(turtle.has(equipmentList['advanced_modem'])))
+	print('  turtle.has(\'computercraft:wireless_modem_advanced\') = ' .. tostring(turtle.has('computercraft:wireless_modem_advanced')))
 end
 
 return Equipper
