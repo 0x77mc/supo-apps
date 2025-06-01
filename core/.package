@@ -1,6 +1,6 @@
 {
 	title = 'APIs used by various programs',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/core',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/core',
 	description = [[Provides APIs used by Supo applications.]],
 	license = 'MIT',
 }

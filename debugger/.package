@@ -1,6 +1,6 @@
 {
 	title = 'Lua Debugger',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/debugger',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/debugger',
 	description = [[Lua interactive debugger]],
 	license = 'MIT',
 }

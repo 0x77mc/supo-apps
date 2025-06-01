@@ -1,6 +1,6 @@
 {
 	title = 'Disk compression',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/lzwfs',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/lzwfs',
 	description = [[Transparent file compression.
 Go to System->Compression to activate]],
 	license = 'MIT',

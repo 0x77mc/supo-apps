@@ -1,6 +1,6 @@
 {
 	title = 'Shell utilities',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/shellex',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/shellex',
 	description = [[Experimental!
 A port of openos shell tools.
 

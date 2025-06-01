@@ -1,6 +1,6 @@
 {
 	title = 'Recipe books for crafting programs',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/recipeBook',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/recipeBook',
 	description = [[Recipe book manager for Milo and programs that utilize crafting]],
 	license = 'MIT',
 }

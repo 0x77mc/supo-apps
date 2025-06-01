@@ -1,6 +1,6 @@
 {
 	title = 'Screen Savers',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/screenSaver',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/screenSaver',
 	description = [[ Various screen savers ]],
 	license = 'MIT',
 }

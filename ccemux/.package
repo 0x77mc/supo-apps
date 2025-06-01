@@ -1,6 +1,6 @@
 {
 	title = 'CCEmuX peripheral management',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/ccemux',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/ccemux',
 	description = [[Peripheral management for CCEmuX
 
 Adds a tab in the System application for configuring peripherals.]],

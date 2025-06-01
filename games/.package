@@ -1,6 +1,6 @@
 {
 	title = 'Games',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/games',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/games',
 	description = [[Games by various people]],
 	license = 'MIT',
 }

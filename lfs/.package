@@ -1,6 +1,6 @@
 {
 	title = 'LuaFileSystem',
-	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/lfs',
+	repository = '0x77mc/supo-apps/{{SUPO_BRANCH}}/lfs',
 	description = [[LuaFileSystem port for computercraft
 See: https://github.com/keplerproject/luafilesystem
 
