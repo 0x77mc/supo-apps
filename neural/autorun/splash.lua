@@ -1,7 +1,7 @@
 local device = _G.device
 local kernel = _G.kernel
 
-local opus = {
+local supo = {
 	'fffff00',
 	'ffff07000',
 	'ff00770b00f4444',
@@ -18,7 +18,7 @@ local opus = {
 local function update()
 	local canvas = device['plethora:glasses'] and device['plethora:glasses'].canvas()
 	if canvas then
-		local Tween = require('opus.ui.tween')
+		local Tween = require('supo.ui.tween')
 		local Glasses = require('neural.glasses')
 
 		local pal = Glasses.getPalette(0x4f)
@@ -37,7 +37,7 @@ local function update()
 			end
 		end
 
-		for k,line in ipairs(opus) do
+		for k,line in ipairs(supo) do
 			drawLine(k, line)
 		end
 		os.sleep(.5)

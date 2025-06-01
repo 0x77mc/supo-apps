@@ -1,9 +1,9 @@
-local Event   = require('opus.event')
-local GPS     = require('opus.gps')
-local Point   = require('opus.point')
-local Sound   = require('opus.sound')
+local Event   = require('supo.event')
+local GPS     = require('supo.gps')
+local Point   = require('supo.point')
+local Sound   = require('supo.sound')
 local Swarm   = require('core.swarm')
-local Util    = require('opus.util')
+local Util    = require('supo.util')
 
 local os         = _G.os
 local peripheral = _G.peripheral

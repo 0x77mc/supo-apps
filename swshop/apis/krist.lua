@@ -1,4 +1,4 @@
-local sha2 = require('opus.crypto.sha2')
+local sha2 = require('supo.crypto.sha2')
 
 local Krist = { }
 

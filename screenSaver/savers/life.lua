@@ -2,7 +2,7 @@
 --License: CC BY-SA 3.0
 --http://www.computercraft.info/forums2/index.php?/topic/12239-100-screensavers-game-of-life-and-matrix/
 
--- modified for use in Opus
+-- modified for use in Supo
 
 local fps = 4 --Determines how long the program will wait between each tick
 local char = "\127" --Live cells will look like this

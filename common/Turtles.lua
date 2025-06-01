@@ -1,9 +1,9 @@
-local Config   = require('opus.config')
-local Event    = require('opus.event')
+local Config   = require('supo.config')
+local Event    = require('supo.event')
 local itemDB   = require('core.itemDB')
-local Socket   = require('opus.socket')
-local UI       = require('opus.ui')
-local Util     = require('opus.util')
+local Socket   = require('supo.socket')
+local UI       = require('supo.ui')
+local Util     = require('supo.util')
 
 local fs         = _G.fs
 local multishell = _ENV.multishell
@@ -321,7 +321,7 @@ function page:runScript(scriptName)
 			local variables = {
 				COMPUTER_ID = os.getComputerID,
 				GPS = function()
-					local pt = require('opus.gps').getPoint()
+					local pt = require('supo.gps').getPoint()
 					if not pt then
 						error('Unable to determine location')
 					end

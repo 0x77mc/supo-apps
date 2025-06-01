@@ -1,7 +1,7 @@
-local class      = require('opus.class')
+local class      = require('supo.class')
 local RSAdapter  = require('core.refinedAdapter')
-local Peripheral = require('opus.peripheral')
-local Util       = require('opus.util')
+local Peripheral = require('supo.peripheral')
+local Util       = require('supo.util')
 
 local MEAdapter = class(RSAdapter)
 

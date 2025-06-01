@@ -1,7 +1,7 @@
 local Grid       = require('turtle.jumper.grid')
 local Pathfinder = require('turtle.jumper.pathfinder')
-local Point      = require('opus.point')
-local Util       = require('opus.util')
+local Point      = require('supo.point')
+local Util       = require('supo.util')
 
 local turtle = _G.turtle
 

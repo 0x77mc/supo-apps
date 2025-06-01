@@ -1,6 +1,6 @@
-local Config = require('opus.config')
+local Config = require('supo.config')
 local Krist  = require('swshop.krist')
-local Util   = require('opus.util')
+local Util   = require('supo.util')
 
 local fs        = _G.fs
 local os        = _G.os

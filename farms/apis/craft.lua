@@ -1,5 +1,5 @@
 local itemDB = require('core.itemDB')
-local Util   = require('opus.util')
+local Util   = require('supo.util')
 
 local fs     = _G.fs
 local turtle = _G.turtle

@@ -1,9 +1,9 @@
 local Adapter = require('milo.miniAdapter')
-local class   = require('opus.class')
-local Config  = require('opus.config')
-local Event   = require('opus.event')
+local class   = require('supo.class')
+local Config  = require('supo.config')
+local Event   = require('supo.event')
 local itemDB  = require('core.itemDB')
-local Util    = require('opus.util')
+local Util    = require('supo.util')
 
 local device   = _G.device
 local os       = _G.os

@@ -1,5 +1,5 @@
-local Config = require('opus.config')
-local Util   = require('opus.util')
+local Config = require('supo.config')
+local Util   = require('supo.util')
 
 local fs         = _G.fs
 local kernel     = _G.kernel

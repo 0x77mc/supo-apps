@@ -1,6 +1,6 @@
-local Config = require('opus.config')
-local Map    = require('opus.map')
-local UI     = require('opus.ui')
+local Config = require('supo.config')
+local Map    = require('supo.map')
+local UI     = require('supo.ui')
 
 local os     = _G.os
 

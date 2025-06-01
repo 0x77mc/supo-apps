@@ -1,10 +1,10 @@
-local Config     = require('opus.config')
-local Event      = require('opus.event')
+local Config     = require('supo.config')
+local Event      = require('supo.event')
 local itemDB     = require('core.itemDB')
 local Milo       = require('milo')
-local Sound      = require('opus.sound')
-local UI         = require('opus.ui')
-local Util       = require('opus.util')
+local Sound      = require('supo.sound')
+local UI         = require('supo.ui')
+local Util       = require('supo.util')
 
 local colors     = _G.colors
 local multishell = _ENV.multishell

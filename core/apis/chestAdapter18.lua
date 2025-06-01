@@ -1,7 +1,7 @@
-local class      = require('opus.class')
-local Util       = require('opus.util')
+local class      = require('supo.class')
+local Util       = require('supo.util')
 local itemDB     = require('core.itemDB')
-local Peripheral = require('opus.peripheral')
+local Peripheral = require('supo.peripheral')
 
 local ChestAdapter = class()
 

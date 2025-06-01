@@ -1,7 +1,7 @@
-local Map     = require('opus.map')
+local Map     = require('supo.map')
 local nameDB  = require('core.nameDB')
 local TableDB = require('core.tableDB')
-local Util    = require('opus.util')
+local Util    = require('supo.util')
 
 local itemDB = TableDB({ fileName = 'usr/config/items.db' })
 

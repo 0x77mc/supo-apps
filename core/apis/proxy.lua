@@ -1,4 +1,4 @@
-local Socket  = require('opus.socket')
+local Socket  = require('supo.socket')
 
 local Proxy = { }
 

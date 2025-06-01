@@ -1,7 +1,7 @@
-local Array  = require('opus.array')
-local Config = require('opus.config')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Array  = require('supo.array')
+local Config = require('supo.config')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local device     = _G.device
 local fs         = _G.fs

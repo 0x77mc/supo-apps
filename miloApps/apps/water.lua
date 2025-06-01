@@ -1,5 +1,5 @@
-local Sound  = require('opus.sound')
-local Util   = require('opus.util')
+local Sound  = require('supo.sound')
+local Util   = require('supo.util')
 
 local fs     = _G.fs
 local os     = _G.os

@@ -1,7 +1,7 @@
 local Blocks    = require('builder.blocks')
-local class     = require('opus.class')
+local class     = require('supo.class')
 local Message   = require('core.message')
-local Util      = require('opus.util')
+local Util      = require('supo.util')
 
 local device     = _G.device
 local fs         = _G.fs

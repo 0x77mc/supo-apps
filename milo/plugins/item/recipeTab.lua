@@ -1,7 +1,7 @@
 local Craft  = require('milo.craft2')
 local itemDB = require('core.itemDB')
 local Milo   = require('milo')
-local UI     = require('opus.ui')
+local UI     = require('supo.ui')
 
 local recipeTab = UI.Tab {
 	title = 'Recipe',

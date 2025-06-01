@@ -1,6 +1,6 @@
-local LZW  = require('opus.compress.lzw')
-local Tar  = require('opus.compress.tar')
-local Util = require('opus.util')
+local LZW  = require('supo.compress.lzw')
+local Tar  = require('supo.compress.tar')
+local Util = require('supo.util')
 
 local shell = _ENV.shell
 

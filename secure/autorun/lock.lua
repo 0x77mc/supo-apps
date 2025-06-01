@@ -1,5 +1,5 @@
-local Config = require('opus.config')
-local Util   = require('opus.util')
+local Config = require('supo.config')
+local Util   = require('supo.util')
 
 local device     = _G.device
 local kernel     = _G.kernel
@@ -18,10 +18,10 @@ local config = Config.load('secure', {
 local timer = config.enabled and os.startTimer(config.timeout)
 
 local function buildLockScreen()
-	local Event    = require('opus.event')
-	local Security = require('opus.security')
-	local SHA      = require('opus.crypto.sha2')
-	local UI       = require('opus.ui')
+	local Event    = require('supo.event')
+	local Security = require('supo.security')
+	local SHA      = require('supo.crypto.sha2')
+	local UI       = require('supo.ui')
 
 	local counter = .1
 

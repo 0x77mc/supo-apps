@@ -12,9 +12,9 @@ local version = "Version 1.1.6"
 -- ----------------------------------------------------------
 
 -- Original code by Bomb Bloke
--- Modified to integrate with opus os
+-- Modified to integrate with supo os
 
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local multishell = _ENV.multishell
 local os         = _G.os

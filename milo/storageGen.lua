@@ -1,6 +1,6 @@
-local UI         = require('opus.ui')
-local Util       = require('opus.util')
-local Peripheral = require('opus.peripheral')
+local UI         = require('supo.ui')
+local Util       = require('supo.util')
+local Peripheral = require('supo.peripheral')
 
 local defaultStoragePath = "/usr/config/storage"
 

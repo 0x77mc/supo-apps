@@ -1,5 +1,5 @@
-local Ansi   = require('opus.ansi')
-local UI     = require('opus.ui')
+local Ansi   = require('supo.ansi')
+local UI     = require('supo.ui')
 
 local infoTab = UI.Tab {
 	title = 'Info',

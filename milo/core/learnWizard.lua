@@ -1,5 +1,5 @@
 local Milo   = require('milo')
-local UI     = require('opus.ui')
+local UI     = require('supo.ui')
 
 local learnPage = UI.Page {
 	titleBar = UI.TitleBar { title = 'Learn Recipe' },

@@ -1,7 +1,7 @@
 {
 	title = 'Useful applications',
-	repository = 'kepler155c/opus-apps/{{OPUS_BRANCH}}/common',
-	description = [[Various applications for Opus.
+	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/common',
+	description = [[Various applications for Supo.
 
 * App Store
 * Peripheral API viewer

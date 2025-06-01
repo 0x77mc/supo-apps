@@ -1,5 +1,5 @@
-local GPS  = require('opus.gps')
-local Util = require('opus.util')
+local GPS  = require('supo.gps')
+local Util = require('supo.util')
 
 local os         = _G.os
 local peripheral = _G.peripheral

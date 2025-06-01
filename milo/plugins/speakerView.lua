@@ -1,6 +1,6 @@
 local Milo    = require('milo')
-local Sound   = require('opus.sound')
-local UI      = require('opus.ui')
+local Sound   = require('supo.sound')
+local UI      = require('supo.ui')
 
 local colors  = _G.colors
 local device  = _G.device

@@ -1,8 +1,8 @@
-local Config = require('opus.config')
-local GPS    = require('opus.gps')
-local Util   = require('opus.util')
-local UI     = require('opus.ui')
-local Event  = require('opus.event')
+local Config = require('supo.config')
+local GPS    = require('supo.gps')
+local Util   = require('supo.util')
+local UI     = require('supo.ui')
+local Event  = require('supo.event')
 
 local colors     = _G.colors
 local fs         = _G.fs

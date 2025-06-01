@@ -1,7 +1,7 @@
 -- original concept: osmarks https://pastebin.com/xEDKdM85
 
-local Sound = require('opus.sound')
-local Util  = require('opus.util')
+local Sound = require('supo.sound')
+local Util  = require('supo.util')
 
 local fs       = _G.fs
 local modules  = _G.peripheral.wrap('back')

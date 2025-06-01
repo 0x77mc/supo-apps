@@ -1,8 +1,8 @@
-local Event  = require('opus.event')
+local Event  = require('supo.event')
 local itemDB = require('core.itemDB')
 local neural = require('neural.interface')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local device     = _G.device
 

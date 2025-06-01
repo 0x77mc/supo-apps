@@ -1,5 +1,5 @@
-local Config = require('opus.config')
-local UI     = require('opus.ui')
+local Config = require('supo.config')
+local UI     = require('supo.ui')
 
 local config = Config.load('saver', {
 	enabled = true,

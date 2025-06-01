@@ -1,7 +1,7 @@
 local Craft  = require('milo.craft2')
 local Milo   = require('milo')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local colors  = _G.colors
 local context = Milo:getContext()

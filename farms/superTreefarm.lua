@@ -1,7 +1,7 @@
 local Equipper   = require('turtle.equipper')
-local GPS        = require('opus.gps')
-local Point      = require('opus.point')
-local Util       = require('opus.util')
+local GPS        = require('supo.gps')
+local Point      = require('supo.point')
+local Util       = require('supo.util')
 
 local fs         = _G.fs
 local os         = _G.os

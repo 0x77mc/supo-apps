@@ -1,7 +1,7 @@
 _G.requireInjector(_ENV)
 
-local Event = require('opus.event')
-local UI = require('opus.ui')
+local Event = require('supo.event')
+local UI = require('supo.ui')
 
 redstone.setBundledOutput('bottom', 0)
 

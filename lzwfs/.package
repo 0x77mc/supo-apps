@@ -1,12 +1,12 @@
 {
 	title = 'Disk compression',
-	repository = 'kepler155c/opus-apps/{{OPUS_BRANCH}}/lzwfs',
+	repository = '0x77mc/supo-apps/{{OPUS_BRANCH}}/lzwfs',
 	description = [[Transparent file compression.
 Go to System->Compression to activate]],
 	license = 'MIT',
 	install = [[ 
-		local Util = require('opus.util')
-		require('opus.config').load('lzwfs', {
+		local Util = require('supo.util')
+		require('supo.config').load('lzwfs', {
 			enabled = false,
 			installed = false,
 			filters = {
@@ -20,8 +20,8 @@ Go to System->Compression to activate]],
 		Util.writeTable('.startup.boot', boot)
 	]],
 	uninstall = [[
-		local Array = require('opus.array')
-		local Util = require('opus.util')
+		local Array = require('supo.array')
+		local Util = require('supo.util')
 		local boot = Util.readTable('.startup.boot')
 		Array.removeByValue(boot.preload or { }, '/packages/lzwfs/startup.lua')
 		Util.writeTable('.startup.boot', boot)

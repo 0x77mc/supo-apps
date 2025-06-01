@@ -1,7 +1,7 @@
 local Craft  = require('milo.craft2')
 local Milo   = require('milo')
-local Sound  = require('opus.sound')
-local Util   = require('opus.util')
+local Sound  = require('supo.sound')
+local Util   = require('supo.util')
 
 local context = Milo:getContext()
 

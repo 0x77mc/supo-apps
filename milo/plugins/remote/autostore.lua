@@ -1,7 +1,7 @@
 local itemDB = require('core.itemDB')
-local Event  = require('opus.event')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Event  = require('supo.event')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local args       = { ... }
 local colors     = _G.colors

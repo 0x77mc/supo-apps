@@ -1,4 +1,4 @@
-local class = require('opus.class')
+local class = require('supo.class')
 
 local os = _G.os
 

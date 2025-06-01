@@ -39,7 +39,7 @@ _ENV.shell.registerHandler(function(env, command, args)
 
 					if fn then
 						if m or wrapped then
-							require('opus.util').print(m or 'nil')
+							require('supo.util').print(m or 'nil')
 						else
 							print()
 						end

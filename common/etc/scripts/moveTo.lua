@@ -1,7 +1,7 @@
 local turtle = _G.turtle
 
 turtle.run(function()
-    local GPS = require('opus.gps')
+    local GPS = require('supo.gps')
 
     if not turtle.enableGPS() then
         error('turtle: No GPS found')

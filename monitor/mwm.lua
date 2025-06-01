@@ -1,6 +1,6 @@
-local Terminal = require('opus.terminal')
-local trace    = require('opus.trace')
-local Util     = require('opus.util')
+local Terminal = require('supo.terminal')
+local trace    = require('supo.trace')
+local Util     = require('supo.util')
 
 local colors     = _G.colors
 local os         = _G.os

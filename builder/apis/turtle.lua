@@ -1,12 +1,12 @@
 local Adapter   = require('core.inventoryAdapter')
 local Builder   = require('builder.builder')
-local class     = require('opus.class')
-local Event     = require('opus.event')
+local class     = require('supo.class')
+local Event     = require('supo.event')
 local itemDB    = require('core.itemDB')
 local Message   = require('core.message')
-local Point     = require('opus.point')
-local UI        = require('opus.ui')
-local Util      = require('opus.util')
+local Point     = require('supo.point')
+local UI        = require('supo.ui')
+local Util      = require('supo.util')
 
 local device     = _G.device
 local fs         = _G.fs

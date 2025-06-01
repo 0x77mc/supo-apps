@@ -1,4 +1,4 @@
-local Util = require('opus.util')
+local Util = require('supo.util')
 
 local colors = _G.colors
 local term   = _G.term

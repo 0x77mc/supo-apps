@@ -5,12 +5,12 @@
 
 -- Updated to use new(ish) canvas3d
 
-local Config = require('opus.config')
-local GPS    = require('opus.gps')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Config = require('supo.config')
+local GPS    = require('supo.gps')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 local itemDB = require('core.itemDB')
-local Event  = require('opus.event')
+local Event  = require('supo.event')
 local Angle  = require('neural.angle')
 
 local keys       = _G.keys

@@ -6,10 +6,10 @@
 	support for specifying scale factor
 ]]
 
-local Config  = require('opus.config')
-local Event   = require('opus.event')
+local Config  = require('supo.config')
+local Event   = require('supo.event')
 local Glasses = require('neural.glasses')
-local Util    = require('opus.util')
+local Util    = require('supo.util')
 
 local colors  = _G.colors
 local device  = _G.device

@@ -1,4 +1,4 @@
-local ramfs = require('opus.fs.ramfs')
+local ramfs = require('supo.fs.ramfs')
 
 local fs = _G.fs
 

@@ -3,9 +3,9 @@ if not _G.turtle then
 end
 
 local Pathing      = require('turtle.pathfind')
-local Point        = require('opus.point')
-local synchronized = require('opus.sync').sync
-local Util         = require('opus.util')
+local Point        = require('supo.point')
+local synchronized = require('supo.sync').sync
+local Util         = require('supo.util')
 
 local os         = _G.os
 local peripheral = _G.peripheral

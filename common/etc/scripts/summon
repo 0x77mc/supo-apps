@@ -1,7 +1,7 @@
 local function summon(id)
-  local GPS    = require('opus.gps')
-  local Point  = require('opus.point')
-  local Socket = require('opus.socket')
+  local GPS    = require('supo.gps')
+  local Point  = require('supo.point')
+  local Socket = require('supo.socket')
 
   turtle.setStatus('GPSing')
   turtle.setPoint({ x = 0, y = 0, z = 0, heading = 0 })

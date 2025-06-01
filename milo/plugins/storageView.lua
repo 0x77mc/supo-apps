@@ -1,5 +1,5 @@
 local itemDB = require('core.itemDB')
-local UI     = require('opus.ui')
+local UI     = require('supo.ui')
 
 local colors = _G.colors
 local device = _G.device

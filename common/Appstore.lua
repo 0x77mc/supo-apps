@@ -1,7 +1,7 @@
-local Ansi   = require('opus.ansi')
-local SHA    = require('opus.crypto.sha2')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Ansi   = require('supo.ansi')
+local SHA    = require('supo.crypto.sha2')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local fs         = _G.fs
 local http       = _G.http

@@ -1,4 +1,4 @@
-local Map = require('opus.map')
+local Map = require('supo.map')
 
 local fs    = _G.fs
 

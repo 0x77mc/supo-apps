@@ -1,6 +1,6 @@
 {
 	{
-		url = "https://raw.githubusercontent.com/kepler155c/opus-recipes/master/switchcraft",
+		url = "https://raw.githubusercontent.com/0x77mc/supo-recipes/master/switchcraft",
 		version = "MC 1.12",
 		localName = "switchcraft",
 		name = "Switchcraft Server",

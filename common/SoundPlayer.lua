@@ -1,6 +1,6 @@
-local Sound = require('opus.sound')
-local UI    = require('opus.ui')
-local Util  = require('opus.util')
+local Sound = require('supo.sound')
+local UI    = require('supo.ui')
+local Util  = require('supo.util')
 
 local peripheral = _G.peripheral
 

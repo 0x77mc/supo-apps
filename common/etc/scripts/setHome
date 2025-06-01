@@ -1,4 +1,4 @@
-local Config = require('opus.config')
+local Config = require('supo.config')
 local pt = turtle.enableGPS()
 if pt then
   local config = Config.load('gps', { })

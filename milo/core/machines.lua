@@ -1,9 +1,9 @@
-local Event  = require('opus.event')
+local Event  = require('supo.event')
 local itemDB = require('core.itemDB')
-local Map    = require('opus.map')
+local Map    = require('supo.map')
 local Milo   = require('milo')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local colors = _G.colors
 local device = _G.device

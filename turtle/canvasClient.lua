@@ -1,5 +1,5 @@
-local Point  = require('opus.point')
-local Util   = require('opus.util')
+local Point  = require('supo.point')
+local Util   = require('supo.util')
 
 local device = _G.device
 local os     = _G.os

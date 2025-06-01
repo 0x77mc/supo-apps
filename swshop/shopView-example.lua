@@ -1,5 +1,5 @@
-local Config     = require('opus.config')
-local Event      = require('opus.event')
+local Config     = require('supo.config')
+local Event      = require('supo.event')
 local itemDB     = require('core.itemDB')
 local Milo       = require('milo')
 

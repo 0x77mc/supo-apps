@@ -1,7 +1,7 @@
-local Event  = require('opus.event')
+local Event  = require('supo.event')
 local itemDB = require('core.itemDB')
 local Milo   = require('milo')
-local Socket = require('opus.socket')
+local Socket = require('supo.socket')
 
 local device = _G.device
 

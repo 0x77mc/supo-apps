@@ -1,7 +1,7 @@
-local class   = require('opus.class')
-local Util    = require('opus.util')
+local class   = require('supo.class')
+local Util    = require('supo.util')
 local DEFLATE = require('builder.deflatelua')
-local Point   = require('opus.point')
+local Point   = require('supo.point')
 
 local bit    = _G.bit
 local fs     = _G.fs

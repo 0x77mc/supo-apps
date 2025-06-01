@@ -1,10 +1,10 @@
 local Craft  = require('milo.craft2')
-local Event  = require('opus.event')
-local fuzzy  = require('opus.fuzzy')
+local Event  = require('supo.event')
+local fuzzy  = require('supo.fuzzy')
 local Milo   = require('milo')
-local Sound  = require('opus.sound')
-local UI     = require('opus.ui')
-local Util   = require('opus.util')
+local Sound  = require('supo.sound')
+local UI     = require('supo.ui')
+local Util   = require('supo.util')
 
 local colors      = _G.colors
 local context     = Milo:getContext()

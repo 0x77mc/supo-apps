@@ -9,12 +9,12 @@
 		Plethora scanner
 		Bucket
 --]]
-local Event    = require('opus.event')
+local Event    = require('supo.event')
 local Equipper = require('turtle.equipper')
-local GPS      = require('opus.gps')
-local Point    = require('opus.point')
-local UI       = require('opus.ui')
-local Util     = require('opus.util')
+local GPS      = require('supo.gps')
+local Point    = require('supo.point')
+local UI       = require('supo.ui')
+local Util     = require('supo.util')
 
 local colors     = _G.colors
 local fs         = _G.fs

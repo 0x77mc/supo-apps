@@ -1,6 +1,6 @@
-local Array   = require('opus.array')
+local Array   = require('supo.array')
 local neural  = require('neural.interface')
-local Point   = require('opus.point')
+local Point   = require('supo.point')
 
 --[[
 	Animate an armor stand or mob. Will just look

@@ -1,7 +1,7 @@
 _G.requireInjector(_ENV)
 
-local Event = require('opus.event')
-local Util = require('opus.util')
+local Event = require('supo.event')
+local Util = require('supo.util')
  
 local chest = peripheral.wrap('top')
 
