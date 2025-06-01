@@ -113,7 +113,7 @@ function turtle.enableGPS(timeout)
 	if device['plethora:scanner'] then
 		pt.heading = getScannedHeading()
 
-	elseif turtle.select('plethora:module:2') then
+	elseif turtle.select('plethora:module_scanner') then
 		-- never swap out modem
 		local equip = turtle.isEquipped('modem') == 'right' and turtle.equipLeft or turtle.equipRight
 

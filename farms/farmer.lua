@@ -55,7 +55,7 @@ end
 
 local retain = Util.transpose {
 	"minecraft:diamond_pickaxe",
-	"plethora:module:2",
+	"plethora:module_scanner",
 	"plethora:module:3",
 }
 

@@ -88,7 +88,7 @@ end
 local function run(member)
 	local turtle = member.turtle
 
-	if not turtle.has('plethora:module:2') then
+	if not turtle.has('plethora:module_scanner') then
 		error('missing scanner')
 	end
 	turtle.reset()
@@ -125,7 +125,7 @@ local function run(member)
 					break
 				end
 				turtle.go({ y = v })
-				turtle.equip(swapSide, 'plethora:module:2')
+				turtle.equip(swapSide, 'plethora:module_scanner')
 				local found = turtle.scan(blocks)
 				turtle.equip(swapSide, 'minecraft:diamond_pickaxe')
 				if Util.size(found) > 0 then

@@ -38,7 +38,7 @@ local LOG            = 'minecraft:log'
 local LOG2           = 'minecraft:log2'
 local OAK_SAPLING    = 'minecraft:sapling:0'
 local SAPLING        = 'minecraft:sapling'
-local SCANNER        = 'plethora:module:2'
+local SCANNER        = 'plethora:module_scanner'
 local SENSOR         = 'plethora:module:3'
 
 local retain = Util.transpose {
