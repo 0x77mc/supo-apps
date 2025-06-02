@@ -182,6 +182,19 @@ function Equipper.debugEquipment()
 	print('  turtle.has(equipmentList[\'advanced_modem\']) = ' .. tostring(turtle.has(equipmentList['advanced_modem'])))
 	print('  turtle.has(\'computercraft:wireless_modem_advanced\') = ' .. tostring(turtle.has('computercraft:wireless_modem_advanced')))
 	
+	print('Standard modem check:')
+	print('  equipmentList[\'standard_modem\'] = ' .. tostring(equipmentList['standard_modem']))
+	print('  turtle.has(equipmentList[\'standard_modem\']) = ' .. tostring(turtle.has(equipmentList['standard_modem'])))
+	print('  turtle.has(\'computercraft:wireless_modem_normal\') = ' .. tostring(turtle.has('computercraft:wireless_modem_normal')))
+	
+	print('Testing turtle.has with exact inventory items:')
+	local slots = turtle.getFilledSlots()
+	for _, slot in pairs(slots) do
+		local itemKey = slot.name .. ':' .. slot.damage
+		print('  turtle.has(\'' .. itemKey .. '\') = ' .. tostring(turtle.has(itemKey)))
+		print('  turtle.has(\'' .. slot.name .. '\') = ' .. tostring(turtle.has(slot.name)))
+	end
+	
 	print('Current equipment:')
 	if not Equipper.equipped then
 		getEquipped()
@@ -194,7 +207,6 @@ function Equipper.debugEquipment()
 	print('  right = ' .. tostring(peripheral.getType('right')))
 	
 	print('Turtle inventory:')
-	local slots = turtle.getFilledSlots()
 	for _, slot in pairs(slots) do
 		print('  slot ' .. slot.index .. ': ' .. slot.name .. ':' .. slot.damage .. ' x' .. slot.count)
 	end
